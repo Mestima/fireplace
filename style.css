@@ -3,9 +3,9 @@ body {
 }
 
 img {
-	width: 99vw;
+	width: 100vw;
 	height: auto;
-	max-height: 98vh;
+	max-height: 99.5vh;
 }
 
 .btn {
@@ -14,7 +14,7 @@ img {
 	left: 0px;
 	width: 100vw;
 	height: 100vh;
-	max-height: 98vh;
+	max-height: 100vh;
 }
 
 .fireplace {
