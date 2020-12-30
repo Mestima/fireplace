@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width, user-scalable=no' />
+		<link rel='icon' type='image/png' href='favicon.png' />
+		<link rel='stylesheet' href='style.css'>
+		<title>Fireplace</title>
+	</head>
+	<body>
+		<div class='fireplace'>
+			<img src='fireplace.gif' />
+		</div>
+		
+		<button class='btn' id='start' type='button' onclick='loadaudio();'>
+			<h1>Press the button to enable sound or wait for 5 seconds to play animation without the sound effect</h1>
+		</button>
+		
+		<audio id='fire' loop>
+			<source src='firesound.ogg' type='audio/ogg'>
+			Your browser does not support the audio element.
+		</audio>
+		<script>
+			function loadaudio() {
+				var btn = document.getElementById("start");
+				btn.hidden = true;
+				
+				var aud = document.getElementById("fire");
+				aud.autoplay = true;
+				aud.load();
+				aud.play();
+			};
+			
+			setTimeout(function() {
+				var btn = document.getElementById("start");
+				btn.hidden = true;
+			}, 5000);
+		</script>
+	</body>
+</html>
